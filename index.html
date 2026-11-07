@@ -1,1 +1,204 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Life Maker Profit Studio · 6 Nov 2026</title>
+<style>
+  :root { --bg:#0e1412; --panel:#17211d; --ink:#e8f3ee; --muted:#9bb3a8; --line:#2a3b34; --gold:#e4c27a; --mint:#7dcea0; --soft:#c9e4d4; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.45 Palatino, Georgia, serif; background:var(--bg); color:var(--ink); }
+  header, main { max-width:1180px; margin:0 auto; padding:18px 22px; }
+  h1 { font-weight:500; letter-spacing:-0.03em; margin:0 0 6px; font-size:32px; }
+  .sub { color:var(--muted); max-width:760px; }
+  .note { color:var(--gold); font-size:14px; }
+  main { display:grid; gap:16px; padding-top:0; }
+  .grid { display:grid; grid-template-columns: 1.2fr .8fr; gap:16px; }
+  @media (max-width:900px) { .grid { grid-template-columns:1fr; } }
+  section { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px 18px; }
+  h2 { margin:0 0 10px; font-size:18px; font-weight:560; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  @media (max-width:700px) { .kpis { grid-template-columns:1fr 1fr; } }
+  .kpi { background:#101814; border-radius:12px; padding:12px; }
+  .kpi b { display:block; font-size:22px; color:var(--mint); }
+  .kpi span { color:var(--muted); font-size:13px; }
+  label { display:block; margin:10px 0 4px; color:var(--muted); font-size:13px; }
+  input[type=range] { width:100%; accent-color:var(--gold); }
+  .row { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+  button, select { background:#24342d; color:var(--ink); border:1px solid var(--line); border-radius:10px; padding:8px 12px; font:inherit; cursor:pointer; }
+  button.primary { background:#3d5c49; }
+  button:hover { filter:brightness(1.08); }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:500; }
+  .tag { font-size:12px; color:var(--gold); }
+  textarea { width:100%; min-height:160px; background:#101814; color:var(--ink); border:1px solid var(--line); border-radius:10px; padding:10px; font:14px/1.4 ui-monospace, monospace; }
+  .links { display:grid; grid-template-columns:1fr 1fr; gap:8px; font-size:14px; }
+  .links a { color:var(--mint); text-decoration:none; }
+  .links a:hover { text-decoration:underline; }
+  .badge { display:inline-block; background:#24342d; color:var(--gold); font-size:12px; padding:2px 8px; border-radius:999px; margin-left:8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Life Maker Profit Studio <span class="badge">6 Nov 2026</span></h1>
+  <p class="sub">Master monitor for the endless money pool. Ten quiet passive engines for Sausage Therapy / Forevermore Farm / Noosa Dachshunds. Pure and peaceful balance. Human-feel controls + paid campaign desk included. Optimise the voice, model the pool, push calm campaigns.</p>
+  <p class="note">All modelled revenue keeps a 10% peace share for dogs, healing and planetary consciousness. No medical claims. No income guarantees. Local storage only — nothing leaves your browser. Built for the flame that never goes out.</p>
+</header>
+<main>
+  <section>
+    <h2>Pool pulse</h2>
+    <div class="kpis">
+      <div class="kpi"><b id="mrr">$0</b><span>modelled monthly</span></div>
+      <div class="kpi"><b id="day">$0</b><span>per quiet day</span></div>
+      <div class="kpi"><b id="give">$0</b><span>peace share set aside</span></div>
+      <div class="kpi"><b id="engines">10</b><span>engines online</span></div>
+    </div>
+  </section>
+  <div class="grid">
+    <section>
+      <h2>Human feel (optimise the voice)</h2>
+      <label>Warmth <span id="vWarm">75</span></label>
+      <input id="warm" type="range" min="0" max="100" value="75" />
+      <label>Calm pace <span id="vCalm">85</span></label>
+      <input id="calm" type="range" min="0" max="100" value="85" />
+      <label>Directness <span id="vDirect">38</span></label>
+      <input id="direct" type="range" min="0" max="100" value="38" />
+      <label>Price softness <span id="vSoft">62</span></label>
+      <input id="soft" type="range" min="0" max="100" value="62" />
+      <p id="voice" class="sub"></p>
+    </section>
+    <section>
+      <h2>Paid campaign desk</h2>
+      <label>Daily ad budget (AUD)</label>
+      <input id="budget" type="range" min="0" max="250" value="40" />
+      <div class="row"><span id="vBudget">$40</span><span id="roas">model return —</span></div>
+      <label>Channel</label>
+      <select id="channel">
+        <option>Meta — calm dog carers & mould-aware</option>
+        <option>Google — clean air + therapy dog</option>
+        <option>Email — existing list only</option>
+        <option>Organic only — no spend</option>
+      </select>
+      <label>Offer</label>
+      <select id="offer">
+        <option>Field Notes PDF $29</option>
+        <option>Peace Membership $21/mo</option>
+        <option>Pet Pulse consult lead</option>
+        <option>Therapy harness waitlist</option>
+        <option>Clean Air Card pack $17</option>
+        <option>ACT Housing Field Pack $39</option>
+        <option>Grant Narrative Kit $49</option>
+        <option>1000 Days Peace Stand $0</option>
+      </select>
+      <div class="row" style="margin-top:12px">
+        <button class="primary" id="draft">Write campaign draft</button>
+        <button id="reset">Reset sliders</button>
+      </div>
+    </section>
+  </div>
+  <section>
+    <h2>Today’s ten engines</h2>
+    <table>
+      <thead><tr><th>App</th><th>Price</th><th>On</th><th>Role in the model</th></tr></thead>
+      <tbody id="apps"></tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Campaign copy</h2>
+    <textarea id="copy" readonly placeholder="Press Write campaign draft to generate calm, compliant copy."></textarea>
+  </section>
+  <section>
+    <h2>Live masterpieces & prior fleets to inspect</h2>
+    <div class="links" id="liveLinks"></div>
+  </section>
+</main>
+<script>
+const APPS = [
+  ["Field Notes 6 Nov","Air + dog observation journal with clean-air prompts for transient days",29,28],
+  ["Peace Membership","Monthly calm practice + dog notes + 10% peace share",21,58],
+  ["Harness Waitlist","Therapy harness preorder with size guide and care notes",95,11],
+  ["Pet Pulse Lead","Clinic intro for Canberra / Sydney outreach, soft entry",0,22],
+  ["Grant Narrative Kit","Female founder + NDIS + animal-assisted story pack",49,13],
+  ["ACT Housing Field Pack","Land Rent / tiny-home checklist + evidence log for stable base",39,10],
+  ["Clean Air Card Pack","Room-check cards for carers, travellers and immunocompromised",17,36],
+  ["Story Hour Audio","Short dachshund field stories from the pack",11,42],
+  ["Referral Desk","Carer-to-carer warm intro for Sausage Therapy",0,18],
+  ["Giving Ledger","10% peace share tracker + impact note for dogs and healing",0,0]
+];
+const LIVE = [
+  ["This daily fleet (GitHub)","https://github.com/forevermore63/life-maker-daily-2026-11-06"],
+  ["31 Oct daily fleet","https://github.com/forevermore63/life-maker-daily-2026-10-31"],
+  ["30 Oct daily fleet","https://github.com/forevermore63/life-maker-daily-2026-10-30"],
+  ["Master Life Maker Profit Monitor (Vercel)","https://master-life-maker-profit-monitor-9b7426031-sausagetherapy.vercel.app"],
+  ["Therapy Sausages Empire (latest)","https://therapy-sausages-empire-n4a5mttsj-sausagetherapy.vercel.app"],
+  ["Life Maker Sausage Therapy","https://life-maker-sausagetherapy-2or4aai61-sausagetherapy.vercel.app"],
+  ["25 Oct daily fleet","https://github.com/forevermore63/life-maker-daily-2026-10-25"],
+  ["24 Oct daily fleet","https://github.com/forevermore63/life-maker-daily-2026-10-24"],
+  ["Profit Desk","https://github.com/forevermore63/life-maker-profit-desk"],
+  ["Sausage Therapy Empire Repo","https://github.com/forevermore63/sausage-therapy-empire"],
+  ["Forevermore Rise","https://github.com/forevermore63/forevermore-rise"],
+  ["Life Maker Hub","https://github.com/forevermore63/life-maker-hub"]
+];
+const $ = id => document.getElementById(id);
+const KEY = "lm-2026-11-06";
+const state = JSON.parse(localStorage.getItem(KEY) || "{}");
+function bind(id, key, fallback) {
+  const el = $(id);
+  el.value = state[key] != null ? state[key] : fallback;
+  el.addEventListener("input", render);
+}
+bind("warm","warm",75); bind("calm","calm",85); bind("direct","direct",38); bind("soft","soft",62); bind("budget","budget",40);
+if (state.channel) $("channel").value = state.channel;
+if (state.offer) $("offer").value = state.offer;
+function money(n){ return "$" + Math.round(n).toLocaleString("en-AU"); }
+function render(){
+  const warm = +$("warm").value, calm = +$("calm").value, direct = +$("direct").value, soft = +$("soft").value, budget = +$("budget").value;
+  $("vWarm").textContent = warm; $("vCalm").textContent = calm; $("vDirect").textContent = direct; $("vSoft").textContent = soft; $("vBudget").textContent = "$"+budget;
+  const feel = Math.round((warm + calm + (100-direct) + soft) / 4);
+  const priceMul = 1 + (soft-50)/200;
+  const trust = 0.55 + feel/250;
+  let mrr = 0;
+  let onCount = 0;
+  document.querySelectorAll("[data-on]").forEach((box,i) => {
+    if (!box.checked) return;
+    onCount++;
+    mrr += APPS[i][2] * priceMul * APPS[i][3] * trust;
+  });
+  const adLift = $("channel").value.startsWith("Organic") ? 1 : 1 + budget/85;
+  mrr *= adLift;
+  $("mrr").textContent = money(mrr);
+  $("day").textContent = money(mrr/30);
+  $("give").textContent = money(mrr*0.1);
+  $("engines").textContent = onCount;
+  $("roas").textContent = budget ? "model return " + ((mrr/30)/budget).toFixed(1) + "x" : "no spend";
+  const tone = direct > 66 ? "plain and short" : warm > 66 ? "warm and unhurried" : "quiet and factual";
+  $("voice").textContent = "Voice right now: " + tone + ". Peace share stays at 10 percent of modelled revenue. Feel score " + feel + ". Pure and peaceful balance.";
+  localStorage.setItem(KEY, JSON.stringify({warm,calm,direct,soft,budget,channel:$("channel").value,offer:$("offer").value,on: Array.from(document.querySelectorAll("[data-on]")).map(b=>b.checked)}));
+}
+function rows(){
+  const saved = (JSON.parse(localStorage.getItem(KEY)||"{}").on) || APPS.map(()=>true);
+  $("apps").innerHTML = APPS.map((a,i) => `<tr><td><b>${a[0]}</b><div class="tag">${a[1]}</div></td><td>$${a[2]||"—"}</td><td><input data-on type="checkbox" ${saved[i]!==false?"checked":""}></td><td>${a[3]} base buyers in the model</td></tr>`).join("");
+  document.querySelectorAll("[data-on]").forEach(el => el.addEventListener("change", render));
+}
+$("draft").onclick = () => {
+  $("copy").value = [
+    "SAUSAGE THERAPY — draft only. Do not boost until you approve the spend.",
+    "Channel: " + $("channel").value,
+    "Offer: " + $("offer").value,
+    "Daily cap: $" + $("budget").value + " AUD. Stop if cost per lead exceeds the offer price.",
+    "",
+    "Primary: A small dachshund, a quiet room, and notes that help a carer notice the air before the day gets loud. Pure and peaceful balance.",
+    "Body: Sausage Therapy keeps the work gentle. No fear copy. One clear next step. The pack senses what the air is doing. 10% peace share always.",
+    "CTA: Open the field notes or join the quiet membership.",
+    "",
+    "Compliance: label ads as ads. No medical cure claims. No income guarantees. Peace share remains 10 percent for dogs, healing and consciousness."
+  ].join("\n");
+};
+$("reset").onclick = () => { localStorage.removeItem(KEY); location.reload(); };
+$("channel").onchange = render; $("offer").onchange = render;
+$("liveLinks").innerHTML = LIVE.map(([n,u]) => `<a href="${u}" target="_blank" rel="noopener">${n}</a>`).join("");
+rows(); render();
+</script>
+</body>
+</html>
